@@ -29,7 +29,7 @@
 		<div class="all_catalog">
 		<div class="katalog">
 		<a href="/gallery.html">Весь каталог наших работ</a>
-		<h2>Материал для работ</h2>
+		<h2>Наши материалы для работ</h2>
 		</div>
 		</div>
 		
