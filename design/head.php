@@ -2,8 +2,7 @@
     <div class="chentryak lepota">
         <div class="gdeCho">
 			<p style="font-size:24px">Гипсокартон - наш материал! <br /> Контактная информация:</p>
-			<p>Прямой тел: (495) 542-66-88<br/> Мобильный: (903) 542-66-88<br/> E-mail: info@gipsmontaj.ru</p>
-			<p><b>«ГипсМонтаж.RU» - </b><br />Гипсокартонные перегородки, потолки и стены.</p>
+			<p>Якийсь новий текст</p>
 			<p style="color:#FFFFFF;">Все контактные данные, переданные нам,<br/> останутся строго конфиденциальными.</p>
 		</div>
         <div id="form">  
@@ -48,6 +47,7 @@
         </form>
         <div align='center' id='cerror'></div>
 
+		Ще якийсь новий текст
         <!--<div class="feedGM">
         </div>
 		-->
