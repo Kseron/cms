@@ -1,0 +1,157 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^gipsa.ru
+RewriteRule (.*) http://www.gipsa.ru/$1 [R=301,L]
+
+RewriteRule ^index.php / [R=301,L]
+RewriteRule ^index.html / [R=301,L]
+#RewriteRule ^ajax/(.*) / [R=301,L]
+RewriteRule ^pages/(.*) / [R=301,L]
+#RewriteRule ^core/(.*) / [R=301,L]
+RewriteRule ^product.html& catalog.html [R=301,L]
+
+RewriteRule ^video-([a-z0-9-_]+).html$ ?page=video&eng_title=$1 [L,QSA]
+RewriteRule ^statia-([a-z0-9-_]+).html$ ?page=stati&eng_title=$1 [L,QSA]
+RewriteRule ^scheme-([a-z0-9-_]+).html$ ?page=shemcat&id=$1 [L,QSA]
+
+#RewriteRule ^discount/([a-z_-]+)/([a-z@_.-]+).html$ ?page=discount&type=$1&mail=$2 [L,QSA]
+#RewriteRule ^discount/([a-z_-]+).html$ ?page=discount&type=$1 [L,QSA]
+RewriteRule ^login/([a-z_-]+).html$ ?page=login&type=$1 [L,QSA]
+
+RewriteRule ^red_category/([0-9]+).html$ ?page=red_category&id=$1 [L,QSA]
+RewriteRule ^del_category/([0-9]+).html$ ?page=del_category&id=$1 [L,QSA]
+
+RewriteRule ^red_menu/([0-9]+).html$ ?page=red_menu&id=$1 [L,QSA]
+RewriteRule ^del_menu/([0-9]+).html$ ?page=del_menu&id=$1 [L,QSA]
+
+RewriteRule ^red_product/([0-9]+).html$ ?page=red_product&id=$1 [L,QSA]
+RewriteRule ^del_product/([0-9]+).html$ ?page=del_product&id=$1 [L,QSA]
+
+RewriteRule ^red_page/([0-9]+).html$ ?page=red_page&id=$1 [L,QSA]
+RewriteRule ^del_page/([0-9]+).html$ ?page=del_page&id=$1 [L,QSA]
+
+#RewriteRule ^adm_orders/([A-Za-z_]+)/([0-9]+).html$ ?page=adm_orders&type=$1&id=$2 [L,QSA]
+
+RewriteRule ^catalog/([0-9]+)/([a-z-_0-9]+)/([0-9]+).html$ ?page=catalog&id=$1&category=$2&str=$3 [L,QSA]
+RewriteRule ^catalog/([0-9]+)/([a-z-_0-9]+).html$ ?page=catalog&id=$1&category=$2 [L,QSA]
+RewriteRule ^catalog/([0-9]+).html$ ?page=catalog&page=$1 [L,QSA]
+
+RewriteRule ^product/([0-9]+)/([+0-9A-Za-z_-]+).html$ ?page=product&id=$1&title=$2 [L,QSA]
+RewriteRule ^product/([+0-9A-Za-z_-]+)/([A-Za-z]+).html$ ?page=product&title=$1&tab=$2 [L,QSA]
+RewriteRule ^product/([+0-9A-Za-z_-]+).html$ ?page=product&title=$1 [L,QSA]
+
+#RewriteRule ^cart/([+0-9A-Za-z_-]+).html$ ?page=cart&type=$1 [L,QSA]
+#RewriteRule ^cart.html$ ?page=cart[L,QSA]
+
+RewriteRule ^novosti/([0-9A-Za-z_-]+).html$ ?page=novosti&eng_title=$1 [L,QSA]
+
+RewriteRule ^gallery/([0-9A-Za-z_-]+).html$ ?page=gallery&eng_title=$1 [L,QSA]
+
+RewriteRule ^account/([A-Za-z_-]+).html$ ?page=account&type=$1 [L,QSA]
+
+#RewriteRule ^adm_orders/([A-Za-z_-]+)/([0-9]).html$ ?page=adm_orders&type=$1&id=$2 [L,QSA]
+#RewriteRule ^adm_orders/([0-9]).html$ ?page=adm_orders&page=$1 [L,QSA]
+
+#RewriteRule ^links/([A-Za-z_-]+).html$ ?page=links&type=$1 [L,QSA]
+
+
+
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/knauf-list-gkl-detail.html$ product/4/knauf-list-gkl.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/knauf-list-vlagostojkij-gklv-detail.html$ product/7/knauf-list-vlagostoykiy-gklv.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/knauf-superpol-ep-detail.html$ product/13/knauf-superpol-ep.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/udlinitel-profilej-60-27-detail.html$ product/24/udlinitel-profiley-60-27.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/ugolok-shtukaturnyj-setchatyj-detail.html$ product/23/ugolok-shtukaturnyy-setchatyy.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/profil-tigi-knauf-ps-6-100-50-detail.html$ product/19/profil-tigi-knauf-ps-6-100-50.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/profil-tigi-knauf-ps-2-50-50-detail.html$ product/18/profil-tigi-knauf-ps-2-50-50.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/profil-tigi-knauf-pp-60-27-detail.html$ product/17/profil-tigi-knauf-pp-60-27.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/profil-metallist-ps-4-75-50-detail.html$ product/11/profil-metallist-ps-4-75-50.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/35-profil-dlya-gipsokartona/profil-metallist-ps-4-75-50-detail.html$ product/11/profil-metallist-ps-4-75-50.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/knauf-profil-stoechnyj-ps-detail.html$ product/10/knauf-profil-stoechnyy-ps.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/knauf-profil-potolochnyj-pp-detail.html$ product/9/knauf-profil-potolochnyy-pp.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/knauf-profil-napravlyayushchij-pn-detail.html$ product/8/knauf-profil-napravlyayuschiy-pn.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/tyaga-podvesa-detail.html$ product/22/tyaga-podvesa.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/soedinitel-odnourovnevyj-60-27-detail.html$ product/21/soedinitel-odnourovnevyy-60-27.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/soedinitel-dvukhurovnevyj-60-27-detail.html$ product/20/soedinitel-dvuhurovnevyy-60-27.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/podves-pryamoj-p60-27-knauf-detail.html$ product/16/podves-pryamoy-p60-27-knauf.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/podves-ankernyj-s-zazhimom-60-27-detail.html$ product/12/podves-ankernyy-s-zazhimom-60-27.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/shpatlevka-finishnaya-weber-vetonit-lr-detail.html$ product/31/shpatlevka-finishnaya-weber-vetonit-lr.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/shpatlevka-finishnaya-weber-vetonit-kr-detail.html$ product/30/shpatlevka-finishnaya-weber-vetonit-kr.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/gotovaya-shpatlevka-sheetrock-detail.html$ product/26/gotovaya-shpatlevka-sheetrock.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/shpatlevka-knauf-uniflot-gipsovaya-vysokoprochnaya-detail.html$ product/2/shpatlevka-knauf-uniflot-gipsovaya-vysokoprochnaya.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/shpatlevka-gipsovaya-knauf-fugen-detail.html$ product/1/shpatlevka-gipsovaya-knauf-fugen.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/shtukaturka-gipsovaya-knauf-rotband-detail.html$ product/3/shtukaturka-gipsovaya-knauf-rotband.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/sukhaya-zasypka-50l-0-05m3-detail.html$ product/29/suhaya-zasypka-50l-0-05m3.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/mastika-kleyashchaya-kalan-ok-detail.html$ product/28/mastika-kleyaschaya-kalan-ok.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/gruntovka-knauf-betokontakt-po-betonu-detail.html$ product/27/gruntovka-knauf-betokontakt-po-betonu.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi/weber-vetonit-3000-vetonit-3000-nalivnoj-pol-detail.html$ product/25/weber-vetonit-3000-vetonit-3000-nalivnoy-pol.html [R=301,L]
+RewriteRule ^katalog-tovara/teploizolyatsiya/bazaltovaya-vata-isover-optimal-100-detail.html$ product/37/bazal-tovaya-vata-isover-optimal-100.html [R=301,L]
+RewriteRule ^katalog-tovara/teploizolyatsiya/bazaltovaya-vata-isover-lajt-100-detail.html$ product/36/bazal-tovaya-vata-isover-layt-100.html [R=301,L]
+RewriteRule ^katalog-tovara/teploizolyatsiya/bazaltovaya-vata-isoroc-izolajt-detail.html$ product/35/bazal-tovaya-vata-isoroc-izolayt.html [R=301,L]
+RewriteRule ^katalog-tovara/teploizolyatsiya/rockwool-lajt-batts-bazaltovaya-vata-detail.html$ product/32/rockwool-layt-batts-bazal-tovaya-vata.html [R=301,L]
+RewriteRule ^katalog-tovara/teploizolyatsiya/zvukopogloshchayushchaya-plita-shumanet-bm-detail.html$ product/38/zvukopogloschayuschaya-plita-shumanet-bm.html [R=301,L]
+RewriteRule ^katalog-tovara/teploizolyatsiya/rockwool-lajt-batts-skandik-detail.html$ product/34/rockwool-layt-batts-skandik.html [R=301,L]
+RewriteRule ^katalog-tovara.html$ catalog.html [R=301,L]
+RewriteRule ^katalog-tovara/sukhie-smesi.html$ catalog/4/suhie-smesi.html [R=301,L]
+RewriteRule ^katalog-tovara/teploizolyatsiya.html$ catalog/9/shumo-teploizolyaciya.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie.html$ catalog/1/gipsokarton-i-komplektuyuschie.html [R=301,L]
+
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/30-gipsokartonnii-list-gkl/knauf-list-gkl-detail.html$ catalog/1/gipsokarton-i-komplektuyuschie.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/31-gipsovoloknistii-list-gvl/knauf-superlist-vlagostojkij-gvlv-detail.html$ product/15/knauf-superlist-vlagostoykiy-gvlv.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/31-gipsovoloknistii-list-gvl/knauf-superpol-ep-detail.html$ product/13/knauf-superpol-ep.html [R=301,L]
+RewriteRule ^katalog-tovara/gipsokarton-i-komplektuyushchie/35-profil-dlya-gipsokartona/profil-metallist-ps-4-75-50-detail.html$ product/11/profil-metallist-ps-4-75-50.html [R=301,L]
+
+
+
+RewriteRule ^potolki-s-podsvetkoj.html$ gallery/potolki-s-podsvetkoj.html [R=301,L]
+RewriteRule ^gipsokartonnye-peregorodki-v-ofise.html$ gallery/gipsokartonnye-peregorodki-v-ofise.html [R=301,L]
+RewriteRule ^potolki-v-zagorodnom-dome.html$ gallery.html [R=301,L]
+RewriteRule ^potolki-steny-i-arki-iz-gipsokartona.html$ gallery/potolki-steny-i-arki-iz-gipsokartona.html [R=301,L]
+RewriteRule ^uslugi-gipsokartonshchikov.html$ gallery/uslugi-gipsokartonschikov.html [R=301,L]
+RewriteRule ^zashivaem-angar-gipsokartonom.html$ gallery/zashivaem-angar-gipsokartonom.html [R=301,L]
+RewriteRule ^radiusnye-gipsokartonnye-potolki.html$ gallery/radiusnye-gipsokartonnye-potolki.html [R=301,L]
+RewriteRule ^raboty-v-taunkhause-pod-klyuch.html$ gallery/raboty-v-taunhause-pod-klyuch.html [R=301,L]
+RewriteRule ^deshevye-potolki.html$ gallery/deshevye-potolki.html [R=301,L]
+RewriteRule ^mnogourovnevye-potolki-iz-gipsokartona.html$ gallery/mnogourovnevye-potolki-iz-gipsokartona.html [R=301,L]
+RewriteRule ^potolki-i-nishi-iz-gipsokartona.html$ gallery/potolki-i-nishi-iz-gipsokartona.html [R=301,L]
+RewriteRule ^mansardnyj-potolok-v-taunkhause.html$ gallery/mansardnyy-potolok-v-taunhause.html [R=301,L]
+RewriteRule ^montazh-mnogourovnevykh-potolkov.html$ gallery/montazh-mnogourovnevykh-potolkov.html [R=301,L]
+RewriteRule ^gipsokartonnye-potolki-v-taunkhause.html$ gallery/gipsokartonnye-potolki-v-taunhause.html [R=301,L]
+RewriteRule ^potolki-i-steny-iz-gipsokartona.html$ gallery/potolki-i-steny-iz-gipsokartona-.html [R=301,L]
+RewriteRule ^kombinirovannye-potolki-v-tankhause.html$ gallery/kombinirovannye-potolki-v-tanhause.html [R=301,L]
+RewriteRule ^pryachem-kommunikatsii-pod-gipsokartonom.html$ gallery/pryachem-kommunikatsii-pod-gipsokartonom.html [R=301,L]
+RewriteRule ^delaem-potolki-v-dome.html$ gallery/delaem-potolki-v-dome.html[R=301,L]
+RewriteRule ^potolki-v-kvartire.html$ gallery/potolki-v-kvartire.html [R=301,L]
+RewriteRule ^otdelka-sten-i-potolka-v-kottedzhe.html$ otdelka-sten-i-potolka-v-kottedzhe.html [R=301,L]
+RewriteRule ^potolok-iz-gipsokartona-v-kottedzhe.html$ gallery/potolok-iz-gipsokartona-v-kottedzhe.html [R=301,L]
+RewriteRule ^oblitsovka-doma-iz-sip-panelej.html$ gallery/oblicovka-doma-iz-sip-paneley.html [R=301,L]
+RewriteRule ^potolki-i-steny-v-taunkhause.html$ gallery/potolki-i-steny-v-taunkhause.html [R=301,L]
+RewriteRule ^gipsokarton-v-domakh-ikh-brusa.html$ gallery/gipsokarton-v-domakh-ikh-brusa.html [R=301,L]
+RewriteRule ^doma-iz-brevna-s-mansardoj.html$ gallery/doma-iz-brevna-s-mansardoj.html [R=301,L]
+RewriteRule ^steny-i-potolki-v-derevyannom-dome.html$ gallery/steny-i-potolki-v-derevyannom-dome.html [R=301,L]
+RewriteRule ^oblitsovka-sten-v-dome-iz-brusa.html$ gallery/oblitsovka-sten-v-dome-iz-brusa.html [R=301,L]
+RewriteRule ^obshivka-sten-i-potolka-gipsokartonom.html$ gallery/obshivka-sten-i-potolka-gipsokartonom.html [R=301,L]
+
+
+RewriteRule ^([a-z0-9-_]+).html$ ?page=$1 [L,QSA]
+
+
+ErrorDocument 404 /pages/404.html
+ErrorDocument 502 /pages/502.html
+
+
+
+php_value display_errors 1
+#php_value error_reporting 2047
+php_value  error_reporting "E_ERROR & E_WARNING & E_PARSE"
+#php_value  error_reporting "E_ERROR"
+
+Options -Indexes
+
+php_value max_input_vars 100000
+php_value max_execution_time 999999999
+php_value post_max_size 100M
+php_value max_file_uploads 100
+php_value max_input_nesting_level 500
+
+php_flag magic_quotes 0

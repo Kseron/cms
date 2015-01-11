@@ -1,0 +1,7 @@
+[Sat Nov 15 14:27:54 2014] [error] [client 92.113.1.129] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/www/cms.kinofon.com.ua/core/config.php on line 12
+[Thu Nov 27 08:13:57 2014] [error] [client 94.178.215.17] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/www/cms.kinofon.com.ua/core/config.php on line 12
+[Thu Nov 27 08:19:18 2014] [error] [client 94.178.215.17] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/www/cms.kinofon.com.ua/classes/portfolio.php on line 516
+[Thu Nov 27 08:28:34 2014] [error] [client 94.178.215.17] PHP Warning:  include(design/head.php): failed to open stream: No such file or directory in /home/www/cms.kinofon.com.ua/html.php on line 67
+[Thu Nov 27 08:28:34 2014] [error] [client 94.178.215.17] PHP Warning:  include(): Failed opening 'design/head.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/www/cms.kinofon.com.ua/html.php on line 67
+[Thu Nov 27 08:28:40 2014] [error] [client 94.178.215.17] PHP Warning:  include(design/head.php): failed to open stream: No such file or directory in /home/www/cms.kinofon.com.ua/html.php on line 67
+[Thu Nov 27 08:28:40 2014] [error] [client 94.178.215.17] PHP Warning:  include(): Failed opening 'design/head.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/www/cms.kinofon.com.ua/html.php on line 67

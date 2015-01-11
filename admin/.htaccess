@@ -1,0 +1,80 @@
+RewriteEngine on
+
+RewriteBase /admin/
+
+#RewriteCond %{HTTP_HOST} ^gipsa.ru/admin/
+#RewriteRule (.*) http://www.gipsa.ru/admin/$1 [R=301,L]
+RewriteRule http://gipsa.ru/admin/(.*) http://www.gipsa.ru/admin/$1 [R=301,L]
+
+#RewriteRule ^/admin/([a-z0-9-_]+).html$ ./index.php?page=$1 [L,QSA]
+RewriteRule ^([a-z0-9-_]+).html$ ./index.php?page=$1 [L,QSA]
+
+RewriteRule ^red_category/([0-9]+).html$ ./index.php?page=red_category&id=$1 [L,QSA]
+RewriteRule ^del_category/([0-9]+).html$ ./index.php?page=del_category&id=$1 [L,QSA]
+
+RewriteRule ^product_list/([0-9]+)/([a-z-_0-9]+)/([0-9]+).html$ index.php?page=product_list&id=$1&category=$2&str=$3 [L,QSA]
+RewriteRule ^product_list/([0-9]+)/([a-z-_0-9]+).html$ index.php?page=product_list&id=$1&category=$2 [L,QSA]
+RewriteRule ^product_list/([0-9]+).html$ index.php?page=product_list&page=$1 [L,QSA]
+RewriteRule ^red_product/([0-9]+).html$ ./index.php?page=red_product&id=$1 [L,QSA]
+RewriteRule ^del_product/([0-9]+).html$ ./index.php?page=del_product&id=$1 [L,QSA]
+
+RewriteRule ^red_page/([0-9]+).html$ ./index.php?page=red_page&id=$1 [L,QSA]
+RewriteRule ^del_page/([0-9]+).html$ ./index.php?page=del_page&id=$1 [L,QSA]
+
+RewriteRule ^red_article/([0-9]+).html$ ./index.php?page=red_article&id=$1 [L,QSA]
+RewriteRule ^del_article/([0-9]+).html$ ./index.php?page=del_article&id=$1 [L,QSA]
+RewriteRule ^red_article_category/([0-9]+).html$ ./index.php?page=red_article_category&id=$1 [L,QSA]
+RewriteRule ^del_article_category/([0-9]+).html$ ./index.php?page=del_article_category&id=$1 [L,QSA]
+
+RewriteRule ^red_new/([0-9]+).html$ ./index.php?page=red_new&id=$1 [L,QSA]
+RewriteRule ^del_new/([0-9]+).html$ ./index.php?page=del_new&id=$1 [L,QSA]
+
+RewriteRule ^red_scheme/([0-9]+).html$ ./index.php?page=red_scheme&id=$1 [L,QSA]
+RewriteRule ^del_scheme/([0-9]+).html$ ./index.php?page=del_scheme&id=$1 [L,QSA]
+
+RewriteRule ^del_photo/([0-9]+).html$ ./index.php?page=del_photo&id=$1 [L,QSA]
+
+RewriteRule ^red_video/([0-9]+).html$ ./index.php?page=red_video&id=$1 [L,QSA]
+RewriteRule ^del_video/([0-9]+).html$ ./index.php?page=del_video&id=$1 [L,QSA]
+
+RewriteRule ^red_albom/([0-9]+).html$ ./index.php?page=red_albom&id=$1 [L,QSA]
+RewriteRule ^del_albom/([0-9]+).html$ ./index.php?page=del_albom&id=$1 [L,QSA]
+RewriteRule ^add_portfolio_image/([0-9]+).html$ ./index.php?page=add_portfolio_image&id=$1 [L,QSA]
+RewriteRule ^albom/([0-9]+).html$ ./index.php?page=albom&id=$1 [L,QSA]
+RewriteRule ^del_portfolio_photo/([0-9]+).html$ ./index.php?page=del_portfolio_photo&id=$1 [L,QSA]
+
+RewriteRule ^order/([0-9]+).html$ ./index.php?page=order&id=$1 [L,QSA]
+RewriteRule ^orders/([0-9]+).html$ ./index.php?page=orders&str=$1 [L,QSA]
+RewriteRule ^red_order/([0-9]+).html$ ./index.php?page=red_order&id=$1 [L,QSA]
+RewriteRule ^change_status/([0-9]+).html$ ./index.php?page=change_status&id=$1 [L,QSA]
+RewriteRule ^del_from_cart/([0-9]+).html$ ./index.php?page=del_from_cart&id=$1 [L,QSA]
+
+RewriteRule ^del_portfolio_photo/([0-9]+).html ./index.php?page=del_portfolio_photo&id=$1 [L,QSA]
+
+RewriteRule ^campaign/([0-9]+).html$ ./index.php?page=campaign&id=$1 [L,QSA]
+RewriteRule ^red_campaign/([0-9]+).html$ ./index.php?page=red_campaign&id=$1 [L,QSA]
+RewriteRule ^del_campaign/([0-9]+).html$ ./index.php?page=del_campaign&id=$1 [L,QSA]
+
+RewriteRule ^red_content_block/([0-9]+).html ./index.php?page=red_content_block&id=$1 [L,QSA]
+
+RewriteRule ^red_user/([0-9]+).html$ ./index.php?page=red_user&id=$1 [L,QSA]
+RewriteRule ^del_user/([0-9]+).html$ ./index.php?page=del_user&id=$1 [L,QSA]
+RewriteRule ^user/([0-9]+).html$ ./index.php?page=user&id=$1 [L,QSA]
+RewriteRule ^bane_user/([0-9]+).html$ ./index.php?page=bane_user&id=$1 [L,QSA]
+
+
+RewriteRule ^settings/([a-z_-]+).html ./index.php?page=settings&type=$1 [L,QSA]
+RewriteRule ^red_setting/([0-9]+).html ./index.php?page=red_setting&id=$1 [L,QSA]
+
+
+php_value display_errors 1
+#php_value error_reporting 2047
+#php_value  error_reporting "E_ERROR & E_WARNING & E_PARSE"
+php_value  error_reporting "E_ALL"
+Options -Indexes
+
+php_value max_input_vars 100000
+php_value max_execution_time 999999999
+php_value post_max_size 100M
+
+php_flag magic_quotes 0
