@@ -97,7 +97,7 @@
 
 <div class="index_last_works">
 	<h3 class="module-title">Наши последние работы</h3>
-	<? echo "123";
+	<? echo "kabaka";
 		echo $portfolio->index_last_works;
 	?>
 </div>
