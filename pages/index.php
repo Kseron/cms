@@ -29,7 +29,7 @@
 	?>
 	</div>
 	</div>
-
+	fuck off
 	<div class="mini_block">
 	<div class="title">Стройматериалы</div>
 	<div class="content">
@@ -97,7 +97,7 @@
 
 <div class="index_last_works">
 	<h3 class="module-title">Наши последние работы</h3>
-	<?
+	<? echo "123";
 		echo $portfolio->index_last_works;
 	?>
 </div>
